@@ -2349,7 +2349,7 @@ namespace libtorrent
 		// want anything in this function to affect the state of
 		// m_need_save_resume_data, so we save it in a local variable and reset
 		// it at the end of the function.
-		bool need_save_resume_data = m_need_save_resume_data;
+		bool const need_save_resume_data = m_need_save_resume_data;
 
 		dec_refcount("check_fastresume");
 		TORRENT_ASSERT(is_single_thread());
